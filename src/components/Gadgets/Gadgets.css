@@ -1,10 +1,31 @@
 .gadget-card{
     width: 300px;
-    height: 500px;
+    height: 450px;
     border: 1px solid #95A0A7;
+    position: relative;
+    border-radius: 0 0 20px 20px;
 }
 .gadget-img{
     width: 285px;
     height: 285px;
     margin: 7px;
+}
+.product-info{
+    padding: 5px 10px;
+}
+.card-btn{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 40px;
+    border: none;
+    border-radius: 0 0 20px 20px;
+    background-color:rgb(96, 61, 129);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-btn:hover{
+    background-color: rgb(53, 114, 114);
 }
