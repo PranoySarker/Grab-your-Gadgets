@@ -1,11 +1,13 @@
 import React from 'react';
+import './Gadgets.css'
 
 const Gadgets = (props) => {
-    console.log(props.gadgets);
-    const { name, image, price } = props.gadgets
+    console.log(props);
+    const { name, image, price } = props.gadget
     return (
-        <div>
-            <h1>This is gadgets:{name}</h1>
+        <div className='gadget-card'>
+            <img className='gadget-img' src={image} alt="" />
+            {/* <h1>This is Gadgets:{name}</h1> */}
         </div>
     );
 };

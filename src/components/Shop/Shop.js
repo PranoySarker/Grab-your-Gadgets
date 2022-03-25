@@ -12,11 +12,11 @@ const Shop = () => {
     }, [])
     return (
         <div className='container'>
-            <div>
+            <div className='gadgets-container'>
                 {
                     gadgets.map(gadget => <Gadgets
                         key={gadget.id}
-                        gadgets={gadgets}></Gadgets>)
+                        gadget={gadget}></Gadgets>)
                 }
                 {/* <Gadgets
                     gadgets={gadgets}>

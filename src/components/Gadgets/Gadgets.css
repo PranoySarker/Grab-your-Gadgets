@@ -1,0 +1,10 @@
+.gadget-card{
+    width: 300px;
+    height: 500px;
+    border: 1px solid #95A0A7;
+}
+.gadget-img{
+    width: 285px;
+    height: 285px;
+    margin: 7px;
+}
