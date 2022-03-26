@@ -31,6 +31,10 @@ const Shop = () => {
 
     }
 
+    const chooseAgain = (items) => {
+        setItem([]);
+    }
+
     return (
         <div className='container'>
             <div className='gadgets-container'>
@@ -43,7 +47,8 @@ const Shop = () => {
 
             </div>
             <div>
-                <Item items={item}>
+                <Item items={item}
+                    chooseAgain={chooseAgain}>
                 </Item>
             </div>
         </div>

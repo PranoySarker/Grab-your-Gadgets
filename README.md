@@ -1,4 +1,4 @@
 ## Grab Your Gadget React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live link of this project [Grab Your Gadget](https://app.netlify.com/sites/calm-haupia-cecbe1/overview).
 

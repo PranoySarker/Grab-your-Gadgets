@@ -4,10 +4,10 @@ import Random from '../Random/Random';
 import './Item.css';
 
 const Item = (props) => {
-    const { items } = props;
+    const { items, chooseAgain } = props;
 
     const [random, setRandom] = useState([]);
-    // const [item, setItem] = useState([]);
+
 
 
 
@@ -20,11 +20,6 @@ const Item = (props) => {
         else {
             alert('please add some items')
         }
-    }
-
-    const chooseAgain = (items) => {
-        items.length = 0;
-        return items;
     }
 
 
@@ -42,7 +37,7 @@ const Item = (props) => {
                     )}
                 <Random chooseOne={random}></Random>
                 <button onClick={chooseOne} className='item-btn'>Choose 1 for me</button>
-                <button onClick={() => chooseAgain(items)} className='item-btn'>Choose again</button>
+                <button onClick={() => chooseAgain(props.chooseAgain)} className='item-btn'>Choose again</button>
             </div>
         </div >
     );
