@@ -4,18 +4,27 @@ import Random from '../Random/Random';
 import './Item.css';
 
 const Item = (props) => {
-    console.log(props);
     const { items } = props;
 
     const [random, setRandom] = useState([]);
+    // const [item, setItem] = useState([]);
 
 
 
     const chooseOne = (random) => {
-        console.log('clicked');
-        const randomItem = Math.floor(Math.random() * items.length);
-        const newRandom = items[randomItem];
-        setRandom(newRandom);
+        if (items.length !== 0) {
+            const randomItem = Math.floor(Math.random() * items.length);
+            const newRandom = items[randomItem];
+            setRandom(newRandom);
+        }
+        else {
+            alert('please add some items')
+        }
+    }
+
+    const chooseAgain = (items) => {
+        items.length = 0;
+        return items;
     }
 
 
@@ -32,7 +41,8 @@ const Item = (props) => {
                         </ul>
                     )}
                 <Random chooseOne={random}></Random>
-                <button onClick={chooseOne} className='item-btn'>Choose One</button>
+                <button onClick={chooseOne} className='item-btn'>Choose 1 for me</button>
+                <button onClick={() => chooseAgain(items)} className='item-btn'>Choose again</button>
             </div>
         </div >
     );

@@ -2,7 +2,7 @@ import React from 'react';
 import './Random.css';
 
 const Random = (props) => {
-    console.log(props);
+    // console.log(props);
 
     return (
         <div className='random'>
