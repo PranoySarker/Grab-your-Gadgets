@@ -1,10 +1,23 @@
 // import { faRandom } from '@fortawesome/free-solid-svg-icons';
-import React from 'react';
+import React, { useState } from 'react';
+import Random from '../Random/Random';
 import './Item.css';
 
 const Item = (props) => {
     console.log(props);
-    const { items, chooseOne } = props;
+    const { items } = props;
+
+    const [random, setRandom] = useState([]);
+
+
+
+    const chooseOne = (random) => {
+        console.log('clicked');
+        const randomItem = Math.floor(Math.random() * items.length);
+        const newRandom = items[randomItem];
+        setRandom(newRandom);
+    }
+
 
     return (
         <div className='item'>
@@ -18,8 +31,8 @@ const Item = (props) => {
                             <li >{item.name}</li>
                         </ul>
                     )}
-
-                <button onClick={() => chooseOne()} className='item-btn'>Choose One</button>
+                <Random chooseOne={random}></Random>
+                <button onClick={chooseOne} className='item-btn'>Choose One</button>
             </div>
         </div >
     );

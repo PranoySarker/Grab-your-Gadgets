@@ -6,7 +6,7 @@ import './Shop.css';
 const Shop = () => {
     const [gadgets, setGadgets] = useState([]);
     const [item, setItem] = useState([]);
-    const [random, setRandom] = useState([]);
+    // const [random, setRandom] = useState([]);
 
     useEffect(() => {
         fetch('data.json')
@@ -32,12 +32,12 @@ const Shop = () => {
 
     }
 
-    const chooseOne = (random) => {
-        console.log('clicked');
-        const randomItem = Math.floor(Math.random() * item.length);
-        const newRandom = item[randomItem];
-        setRandom(newRandom);
-    }
+    // const chooseOne = (random) => {
+    //     console.log('clicked');
+    //     const randomItem = Math.floor(Math.random() * item.length);
+    //     const newRandom = item[randomItem];
+    //     setRandom(newRandom);
+    // }
     return (
         <div className='container'>
             <div className='gadgets-container'>
@@ -52,8 +52,7 @@ const Shop = () => {
                 </Gadgets> */}
             </div>
             <div>
-                <Item items={item}
-                    chooseOne={chooseOne}>
+                <Item items={item}>
                 </Item>
             </div>
         </div>

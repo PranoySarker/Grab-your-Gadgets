@@ -1,5 +1,5 @@
 .item{
-    height: 300px;
+    height: 400px;
     width:280px;
     background-color:rgb(96, 61, 129);
     color: white;
@@ -16,7 +16,7 @@
     margin: 5px;
 }
 .item-btn{
-    margin-top: 30px;
+    margin-top: 20px;
     width: 219px;
     height: 30px;
     border: none;
@@ -29,7 +29,7 @@
 @media only screen and (max-width: 600px) {
    .item{
     width: 150px;
-    height: 350px;
+    height: 700px;
     margin-left: 5px;
    }
    .item-info{

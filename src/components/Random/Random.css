@@ -1,0 +1,14 @@
+.random{
+  margin-top: 20px;
+}
+.random-box{
+    border: 1px solid aqua;
+    border-radius: 5px;
+    height: auto;
+    padding: 5px;
+}
+@media only screen and (max-width: 600px) {
+    .random{
+        margin-top: 20px;
+      }  
+}
