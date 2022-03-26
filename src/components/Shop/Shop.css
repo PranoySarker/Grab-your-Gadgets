@@ -9,3 +9,21 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap:50px;
 }
+.item-container{
+
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+    .container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .gadgets-container{
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }

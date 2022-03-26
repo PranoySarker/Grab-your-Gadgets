@@ -9,5 +9,40 @@
     top: 0;
 }
 .item-info{
-    padding: 15px;
+    padding: 25px;
+}
+.item-info p{
+    color: aqua;
+    margin: 5px;
+}
+.item-btn{
+    margin-top: 30px;
+    width: 219px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: aqua;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 600px) {
+   .item{
+    width: 150px;
+    height: 350px;
+    margin-left: 5px;
+   }
+   .item-info{
+    padding: 18px;
+}
+.item-btn{
+    margin-top: 30px;
+    width: 119px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: aqua;
+    font-size: 17px;
+    font-weight: 700;
+}
 }

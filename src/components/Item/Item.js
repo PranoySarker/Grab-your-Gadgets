@@ -1,8 +1,11 @@
+// import { faRandom } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import './Item.css';
 
 const Item = (props) => {
-    const { items } = props;
+    console.log(props);
+    const { items, chooseOne } = props;
+
     return (
         <div className='item'>
             <div className='item-info'>
@@ -15,6 +18,8 @@ const Item = (props) => {
                             <li >{item.name}</li>
                         </ul>
                     )}
+
+                <button onClick={() => chooseOne()} className='item-btn'>Choose One</button>
             </div>
         </div >
     );

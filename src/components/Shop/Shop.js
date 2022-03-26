@@ -6,6 +6,7 @@ import './Shop.css';
 const Shop = () => {
     const [gadgets, setGadgets] = useState([]);
     const [item, setItem] = useState([]);
+    const [random, setRandom] = useState([]);
 
     useEffect(() => {
         fetch('data.json')
@@ -23,6 +24,19 @@ const Shop = () => {
             alert('This item is Exist in your list');
         }
 
+        if (item.length > 3) {
+            alert('You can not add items more than four');
+            const newItem = item.slice(0, 4);
+            setItem(newItem);
+        }
+
+    }
+
+    const chooseOne = (random) => {
+        console.log('clicked');
+        const randomItem = Math.floor(Math.random() * item.length);
+        const newRandom = item[randomItem];
+        setRandom(newRandom);
     }
     return (
         <div className='container'>
@@ -38,7 +52,9 @@ const Shop = () => {
                 </Gadgets> */}
             </div>
             <div>
-                <Item items={item}></Item>
+                <Item items={item}
+                    chooseOne={chooseOne}>
+                </Item>
             </div>
         </div>
     );
